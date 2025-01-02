@@ -14,12 +14,7 @@ const VehicleList = ({ vehicles }) => {
             const { name, gas_usage, service_sched, usage_log } = vehicle;
 
             return (
-                name.toLowerCase().includes(query.toLowerCase()) ||
-                String(gas_usage).toLowerCase().includes(query.toLowerCase()) ||
-                String(service_sched)
-                    .toLowerCase()
-                    .includes(query.toLowerCase()) ||
-                String(usage_log).toLowerCase().includes(query.toLowerCase())
+                name.toLowerCase().includes(query.toLowerCase())
             );
         });
 

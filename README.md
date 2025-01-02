@@ -68,7 +68,9 @@ pastikan versi software sebagai berikut
 8. **Jalankan Server**
 
     ```bash
+    npm run build
     npm run dev
+    
     php artisan serve
     ```
     

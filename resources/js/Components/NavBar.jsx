@@ -39,7 +39,7 @@ const NavBar = () => {
             <div className="flex items-center text-white font-black text-3xl md:text-4xl">
                 Vehi<span className=" text-orange-400">Call</span>
             </div>
-            <div className="hidden lg:flex flex-row justify-center items-center w-full gap-5">
+            <div className={`hidden ${isAuthenticated ? "lg:flex" : ""} flex-row justify-center items-center w-full gap-5`}>
                 <Link
                     className={`p-2 hover:font-bold hover:text-orange-400 transition-all duration-500 ease-in-out ${
                         isActive("/") ? " text-orange-400 font-bold" : ""
