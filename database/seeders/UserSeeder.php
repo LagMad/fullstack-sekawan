@@ -21,7 +21,7 @@ class UserSeeder extends Seeder
 
         \App\Models\User::create([
             'name' => 'Approver',
-            'email' => 'approver@example.com',
+            'email' => 'approver@gmail.com',
             'password' => bcrypt('password123'),
             'role' => 'approver',
         ]);
