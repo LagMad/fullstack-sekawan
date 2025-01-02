@@ -71,5 +71,7 @@ pastikan versi software sebagai berikut
     npm run dev
     php artisan serve
     ```
+    
 jalankan kedua command pada 2 console yang berbeda
 
+9. **Buka web pada link yang dihasilkan php artisan serve. Klik sambil menahan ctrl**
