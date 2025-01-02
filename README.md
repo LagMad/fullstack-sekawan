@@ -41,25 +41,31 @@ pastikan versi software sebagai berikut
     npm install
     ```
 
-4. **Generate Kunci Aplikasi**
+4. **Salin** File .env **Salin** file .env.example menjadi .env
+
+    ```bash
+    cp .env.example .env
+    ```
+
+5. **Generate Kunci Aplikasi**
 
     ```bash
     php artisan key:generate
     ```
 
-5. **Migrasi Database**
+6. **Migrasi Database**
 
     ```bash
     php artisan migrate
     ```
 
-6. **Generate Seeder**
+7. **Generate Seeder**
 
     ```bash
     php artisan db:seed
     ```
 
-7. **Jalankan Server**
+8. **Jalankan Server**
 
     ```bash
     npm run dev
