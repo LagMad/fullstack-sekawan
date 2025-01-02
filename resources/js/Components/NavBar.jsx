@@ -19,25 +19,23 @@ const NavBar = () => {
     };
 
     useEffect(() => {
-        // If data is not available via Inertia, check localStorage
         if (!userData && localStorage.getItem("user")) {
             setUserData(JSON.parse(localStorage.getItem("user")));
             setAuthToken(localStorage.getItem("userToken"));
         }
     }, [userData, authToken]);
     const isAuthenticated = Boolean(authToken);
+    const isAdmin = userData?.email === "admin@gmail.com";
 
     const handleLogOut = () => {
-        // Remove user data and token from localStorage
         localStorage.removeItem("user");
         localStorage.removeItem("userToken");
 
-        // Redirect to home or login page after logout
-        Inertia.visit("/"); // You can choose to go to the login page
+        Inertia.visit("/");
     };
 
     return (
-        <nav className="flex flex-row justify-between px-5 lg:px-16 py-4 lg:py-6 bg-slate-800 text-white">
+        <nav className=" fixed w-full flex flex-row justify-between px-5 lg:px-16 py-4 lg:py-6 bg-slate-800 text-white z-50">
             <div className="flex items-center text-white font-black text-3xl md:text-4xl">
                 Vehi<span className=" text-orange-400">Call</span>
             </div>
@@ -73,7 +71,7 @@ const NavBar = () => {
                         isActive("/admin-dashboard")
                             ? " text-orange-400 font-bold"
                             : ""
-                    }`}
+                    } ${isAdmin ? "" : "hidden"}`}
                     href="/admin-dashboard"
                 >
                     Admin Dashboard
@@ -208,7 +206,9 @@ const NavBar = () => {
                                         </Link>
                                     </li>
                                     <li
-                                        className="flex lg:hidden justify-center items-center text-white bg-orange-500 hover:bg-orange-400 px-7 py-2 rounded-xl font-medium text-sm md:text-sm transition-all duration-500 ease-in-out"
+                                        className={`flex lg:hidden justify-center items-center text-white bg-orange-500 hover:bg-orange-400 px-7 py-2 rounded-xl font-medium text-sm md:text-sm transition-all duration-500 ease-in-out ${
+                                            isAdmin ? "" : "hidden"
+                                        }`}
                                         style={{ cursor: "pointer" }}
                                     >
                                         <Link

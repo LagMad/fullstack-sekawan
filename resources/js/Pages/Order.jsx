@@ -25,7 +25,7 @@ const Order = ({ vehicles, drivers, approvers, onSubmit }) => {
     }, [vehicles]);
 
     return (
-        <div className="flex flex-col py-10 justify-center gap-10">
+        <div className="flex flex-col pt-32 pb-10 justify-center gap-10">
             <div className="flex justify-center text-5xl font-black text-slate-800">
                 Order
             </div>

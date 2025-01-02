@@ -13,13 +13,13 @@ const Layout = ({ children }) => {
             </Head>
             <header>
                 {!hideNavBar && (
-                    <header>
+                    <header className="z-50">
                         <NavBar />
                     </header>
                 )}
             </header>
 
-            <main className=" h-max md:min-h-screen px-5 lg:px-16">{children}</main>
+            <main className=" h-max md:min-h-screen px-5 lg:px-16 z-0">{children}</main>
             <Footer />
         </>
     );

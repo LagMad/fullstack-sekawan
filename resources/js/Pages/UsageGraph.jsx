@@ -2,7 +2,7 @@ import React from 'react'
 
 const UsageGraph = () => {
   return (
-    <div>UsageGraph</div>
+    <div className='pt-32'>UsageGraph</div>
   )
 }
 

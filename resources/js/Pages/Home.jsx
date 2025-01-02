@@ -20,7 +20,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="w-full lg:min-h-screen flex flex-col md:flex-row justify-center items-center pt-5 md:pt-3 lg:pt-0 pb-10 gap-16">
+            <div className="w-full lg:min-h-screen flex flex-col md:flex-row justify-center items-center pt-32 md:pt-3 lg:pt-16 pb-10 gap-16">
                 <motion.div
                     className=" w-full md:w-1/2 flex flex-col gap-2"
                     initial={{ opacity: 0, x: -150 }}

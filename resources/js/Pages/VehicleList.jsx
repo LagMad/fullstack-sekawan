@@ -36,7 +36,7 @@ const VehicleList = ({ vehicles }) => {
     }, []);
 
     return (
-        <div className="flex flex-row w-full min-h-screen mt-16 px-0 md:px-0 lg:px-16 xl:px-32 pb-24 font-Poppins gap-16">
+        <div className="flex flex-row w-full min-h-screen pt-32 px-0 md:px-0 lg:px-16 xl:px-32 pb-24 font-Poppins gap-16">
             <div className="flex flex-col w-full justify-start items-start gap-6">
                 <div className=" w-full md:w-1/3">
                     <SearchBar
